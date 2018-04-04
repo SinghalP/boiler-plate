@@ -14,7 +14,9 @@ $ npm install
 If you face any issues follow below steps
 
 $ npm install gulp
+
 $ npm uninstall babel-loader
+
 $ npm install babel-loader@7.1.1
 
 ## Compile
