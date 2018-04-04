@@ -6,8 +6,9 @@
  
  module.exports = {
 	entry: {
-		helloworld:'./src/helloworld.js',
-		waituntil:'./src/waitUntil.js'
+		helloworld:['./src/helloworld.js'],
+		v0_control:['./src/js/v0_control/control.js'],
+		v1_test:['./src/js/v1_test/test.js']
 	},
 	output: {
 		path: path.resolve(__dirname, 'bin'),
@@ -15,7 +16,15 @@
 	},
 	plugins: [
 		new CleanWebpackPlugin(pathsToClean),
-		new UglifyJsPlugin()
+		new UglifyJsPlugin({
+			sourceMap: true,
+			uglifyOptions:{
+				compress:{
+					drop_console:true,
+					drop_debugger:true
+				}
+			}
+		})
 	],
 	module:{
 		loaders:[{

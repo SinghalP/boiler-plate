@@ -1,4 +1,4 @@
-import waitUntil from '../src/waitUntil';
+import waitUntil from '../src/js/utils/waitUntil';
 
 describe( 'Wait Until', function () {
 
@@ -42,6 +42,4 @@ describe( 'Wait Until', function () {
 		waitUntil( [ '.QWERTY' ], foo.done, false );
 		expect( foo.done ).not.toHaveBeenCalled();
 	} );
-
-
 } );
