@@ -23,5 +23,7 @@ $ npm install babel-loader@7.1.1
 ## Compile
 $ gulp
 
+This will create a 'bin' folder for compiled files.
+
 ## Authors
 Prateek Singhal
